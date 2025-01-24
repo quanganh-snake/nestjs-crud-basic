@@ -11,6 +11,7 @@ import { ProductsModule } from './modules/products/products.module';
 import { LoggingMiddleware } from 'src/midllewares/logging/logging.middleware';
 import { AuthMiddleware } from 'src/midllewares/auth/auth.middleware';
 import { RolesModule } from './modules/roles/roles.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -35,7 +36,8 @@ import { RolesModule } from './modules/roles/roles.module';
     }),
     UsersModule,
     ProductsModule,
-    RolesModule
+    RolesModule,
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],
